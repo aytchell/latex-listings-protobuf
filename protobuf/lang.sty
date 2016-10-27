@@ -1,0 +1,50 @@
+\lstdefinelanguage[2]{protobuf}{%
+    sensitive=true,%
+    morecomment=[l]{//},%
+    morestring=[b]{"},%
+    % For the keywords of Protocol Buffers
+    % see https://developers.google.com/protocol-buffers/docs/proto
+    morekeywords={enum,oneof,map,syntax,public,import,option,package,message,%
+        group,optional,required,repeated,default,reserved,extend,extensions,%
+        to,max,service,rpc,returns,true,false},%
+    % Basic types
+    % see https://developers.google.com/protocol-buffers/docs/proto#scalar
+    morekeywords=[2]{%
+        double,float,int32,int64,uint32,uint64,sint32,sint64,%
+        fixed32,fixed64,sfixed32,sfixed64,bool,string,bytes},%
+    % Options
+    % taken from 'google/protobuf/descriptor.proto'
+    morekeywords=[3]{%
+        % Generic Options
+        deprecated, uninterpreted_option,%
+        % File Options
+        java_package,java_outer_classname,java_multiple_files,%
+        java_generate_equals_and_hash,java_string_check_utf8,optimize_for,%
+        go_package,cc_generic_services,java_generic_services,%
+        py_generic_services,cc_enable_arenas,obj_class_prefix,%
+        csharp_namespace,%
+        % Message Options
+        message_set_wire_format,no_standard_descriptor_accessor,map_entry,%
+        % Field Options
+        ctype, packed,jstype,lazy,weak,%
+        % Enum Options
+        allow_alias}%
+}
+\lstalias[]{protobuf2}[2]{protobuf}
+
+\lstdefinelanguage[3]{protobuf}[2]{protobuf}{%
+    % Language keywords
+    % see https://developers.google.com/protocol-buffers/docs/proto3
+    deletekeywords={
+        % 'group' was marked as deprecated in protobuf2; now it's disallowed
+        group,%
+        % in protobuf3 the Any type replaces extensions (from protobuf2)
+        extensions, to, extend, max,%
+        % 'required' is no longer allowed
+        required,%
+        % 'optional' is default; stating it explicitly is disallowed
+        optional,%
+        % explicit default values are no longer allowed
+        default}%
+}
+\lstalias[]{protobuf3}[3]{protobuf}

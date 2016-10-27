@@ -1,0 +1,37 @@
+package com.example.search;
+
+import "myproject/other_things.proto";
+import public "new_thing.proto";
+
+// This file declares some protobuf messages. This comment is so long, that 'listings.sty' will break the line
+
+message SearchRequest {
+  required string query           = 1;
+
+  // Which page number do we want
+  optional int32 page_number      = 2;
+
+  // Number of results to return per page
+  optional uint32 result_per_page = 3 [default = 10];
+
+  repeated int64 samples          = 4 [packed=true];
+
+  enum Corpus {
+    option allow_alias = true;
+    UNIVERSAL = 0;
+    WEB       = 1;
+    IMAGES    = 2;
+  }
+  optional Corpus corpus          = 5 [default = UNIVERSAL];
+}
+
+message Foo {
+  oneof thingy {
+    string name = 4;
+    bool person = 5;
+  }
+
+  reserved 2, 15, 9 to 11;
+  reserved "foo", "bar";
+  extensions 1000 to max;
+}
