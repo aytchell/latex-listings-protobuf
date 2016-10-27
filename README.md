@@ -3,6 +3,16 @@
 Language definitions and styles for adding 'protobuf' highlighting to the
 'listings' package in LaTeX.
 
+Information about
+[Protocol Buffers](https://developers.google.com/protocol-buffers/docs/proto)
+
+Manual of the [listings package]
+(http://texdoc.net/texmf-dist/doc/latex/listings/listings.pdf)
+
+In case you don't know LaTeX yet ...
+[Start reading here](https://en.wikibooks.org/wiki/LaTeX)
+
+
 ## Usage
 
 ```latex
@@ -16,17 +26,14 @@ Language definitions and styles for adding 'protobuf' highlighting to the
 \end{document}
 ```
 
-Information about
-[Protocol Buffers](https://developers.google.com/protocol-buffers/docs/proto)
-
 ## Example
 
 An example of this package's usage can be found in the 'example' directory.
-There you'll also find the following screenshots of the three different
-contained styles.
 
-Currently you can change the used style only by editing
-```protobuf/style.sty (but this shouldn't be too muich hassle).
+As you can see below, there are three different styles available (of course
+you can define your own highlighting). Currently you can select the style to
+be used only by editing `protobuf/style.sty` (but this shouldn't be too much
+hassle).
 
 ![](https://raw.githubusercontent.com/aytchell/latex-listings-protobuf/master/example/solarized.png)
 *Solarized style*
