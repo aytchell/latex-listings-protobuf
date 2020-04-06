@@ -6,8 +6,7 @@ Language definitions and styles for adding 'protobuf' highlighting to the
 Information about
 [Protocol Buffers](https://developers.google.com/protocol-buffers/docs/proto)
 
-Manual of the [listings package]
-(http://texdoc.net/texmf-dist/doc/latex/listings/listings.pdf)
+Manual of the [listings package](http://texdoc.net/texmf-dist/doc/latex/listings/listings.pdf)
 
 In case you don't know LaTeX yet ...
 [Start reading here](https://en.wikibooks.org/wiki/LaTeX)
